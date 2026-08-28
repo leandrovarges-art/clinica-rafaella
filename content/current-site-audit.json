@@ -1,0 +1,196 @@
+{
+  "fonte": {
+    "url": "https://clinicarafaellagomes.com.br/",
+    "data_auditoria": "2026-08-28",
+    "stack_detectada": "WordPress 7.0.4 + WooCommerce 10.3.7 + WPBakery Page Builder + Slider Revolution + LayerSlider + Site Kit by Google",
+    "paginas_encontradas": [
+      "https://clinicarafaellagomes.com.br/",
+      "https://clinicarafaellagomes.com.br/sobre/",
+      "https://clinicarafaellagomes.com.br/tratamentos/",
+      "https://clinicarafaellagomes.com.br/contato/",
+      "https://clinicarafaellagomes.com.br/tratamentos/lentes-de-contato/",
+      "https://clinicarafaellagomes.com.br/tratamentos/clareamento-dental/",
+      "https://clinicarafaellagomes.com.br/tratamentos/restauracoes-obturacoes/",
+      "https://clinicarafaellagomes.com.br/tratamentos/aplicacao-de-botox/",
+      "https://clinicarafaellagomes.com.br/tratamentos/alinhadores-invisiveis/",
+      "https://clinicarafaellagomes.com.br/tratamentos/limpeza-dental/",
+      "https://clinicarafaellagomes.com.br/tratamentos/laserterapia/",
+      "https://clinicarafaellagomes.com.br/tratamentos/tratamento-de-ronco-apneia-e-doencas-cronicas/"
+    ]
+  },
+
+  "servicos": [
+    {
+      "nome": "Lentes de Contato",
+      "slug_original": "lentes-de-contato",
+      "descricao": "Previsibilidade, desgaste mínimo, e rapidez no tratamento — essas são as palavras-chave quando falamos de trabalhos em porcelana. Utilizamos o material resistente e moderno do mercado: e-Max. Os trabalhos de prótese são feitos digitalmente, com o objetivo de transformar o sorriso, com aprovação prévia do tratamento e resultado final.",
+      "beneficios": [
+        "Previsibilidade",
+        "Desgaste mínimo ou nenhum desgaste do dente",
+        "Rapidez no tratamento",
+        "Material moderno (e-Max)",
+        "Planejamento digital com aprovação prévia do resultado",
+        "Procedimento indolor"
+      ]
+    },
+    {
+      "nome": "Clareamento Dental",
+      "slug_original": "clareamento-dental",
+      "descricao": "Tratamento estético utilizado para deixar o sorriso do paciente mais claro e harmônico, melhorando a autoestima. Técnica simples e acessível, de baixo investimento.",
+      "beneficios": [
+        "Sorriso mais claro e harmônico",
+        "Melhoria da autoestima",
+        "Baixo investimento"
+      ]
+    },
+    {
+      "nome": "Restaurações/Obturações",
+      "slug_original": "restauracoes-obturacoes",
+      "descricao": "Reconstruções dos dentes utilizando resinas importadas, materiais resistentes e de boa durabilidade, de excelente performance. Tratamento adequado para acabar com cáries e dor de dente.",
+      "beneficios": [
+        "Resinas importadas de alta durabilidade",
+        "Elimina cáries e dor de dente"
+      ]
+    },
+    {
+      "nome": "Aplicação de Botox",
+      "slug_original": "aplicacao-de-botox",
+      "descricao": "Tratamento estético oferecido pela clínica para aumentar a autoestima e qualidade de vida de homens e mulheres que buscam mudanças. A página atual não detalha áreas de aplicação, técnica ou indicações clínicas específicas.",
+      "beneficios": [
+        "Aumento da autoestima",
+        "Melhoria da qualidade de vida"
+      ]
+    },
+    {
+      "nome": "Alinhadores Invisíveis",
+      "slug_original": "alinhadores-invisiveis",
+      "descricao": "Chega de fios e bráquetes que machucam a gengiva. Os alinhadores invisíveis são placas de tratamento que alinham e corrigem os dentes sem dores.",
+      "beneficios": [
+        "Sem dores durante o tratamento",
+        "Tempo de tratamento previamente calculado — paciente sabe quando inicia e finaliza",
+        "Sem restrição alimentar"
+      ],
+      "observacao": "O site atual NÃO menciona a marca Invisalign em nenhum lugar — usa apenas o termo genérico 'Alinhadores Invisíveis'. Ver bloco 'invisalign' abaixo."
+    },
+    {
+      "nome": "Limpeza Dental",
+      "slug_original": "limpeza-dental",
+      "descricao": "Limpeza profunda dos dentes com remoção de tártaros, pequenas manchas (cigarro, chá), jato de bicarbonato, passagem de ultrassom para remoção subgengival, profilaxia com polimento e aplicação de flúor. Orientações para uma melhor higiene oral.",
+      "beneficios": []
+    },
+    {
+      "nome": "Laserterapia",
+      "slug_original": "laserterapia",
+      "descricao": "Tratamento de laser de baixa potência que emite onda vermelha e/ou infravermelha, promovendo alívio de dores, redução de inchaço local e aceleração do tempo de reparação de cirurgias.",
+      "beneficios": [
+        "Alívio de dores",
+        "Redução de inchaço local",
+        "Acelera reparação pós-cirúrgica (ex: pós-operatório de implantes)",
+        "Descontaminação de canais na endodontia",
+        "Auxilia no tratamento de aftas e herpes"
+      ]
+    },
+    {
+      "nome": "Tratamento de Ronco, Apneia e Doenças Crônicas",
+      "slug_original": "tratamento-de-ronco-apneia-e-doencas-cronicas",
+      "descricao": "Para ronco: uso de aparelho intra-oral que ajuda a manter a mandíbula projetada, impedindo que ela colabore na obstrução da via aérea. Para apneia: um protetor bucal personalizado especialmente projetado pode funcionar como alternativa à terapia CPAP.",
+      "beneficios": [
+        "Aparelho intra-oral para ronco",
+        "Alternativa não invasiva à CPAP para apneia"
+      ]
+    }
+  ],
+
+  "processo_atendimento_generico": {
+    "diagnostico": "Consulta clínica investigativa que detecta desde simples cáries, infiltrações de restaurações, desgastes dentários por apertamento, bruxismo, má-oclusões, dores na articulação, fraturas de dente e infecção dentária.",
+    "planejamento": "Tem início na primeira consulta do paciente, com o objetivo de definir um plano de tratamento odontológico sobre cada etapa, à medida que os atendimentos forem avançando.",
+    "observacao": "Esse bloco de 'Diagnóstico + Planejamento' é repetido de forma idêntica em TODAS as páginas de tratamento — não é conteúdo específico por serviço."
+  },
+
+  "dra_rafaella": {
+    "nome_completo": "Dra. Rafaella Gomes",
+    "cro": "CRO 22601",
+    "titulo_profissional": "Mestre Dentista",
+    "formacao": "Formada há 25 anos (tempo relativo mencionado no site, não uma data/ano absoluto), com Mestrado e Especialidades em diversas áreas da odontologia.",
+    "missao": "Preservar a saúde, o sorriso e a qualidade de vida de seus pacientes, a partir de um atendimento personalizado, ético e profissional.",
+    "competencias_clinicas_citadas": [
+      "Diagnóstico de cáries",
+      "Infiltrações de restaurações",
+      "Desgastes dentários por apertamento/bruxismo",
+      "Má-oclusões",
+      "Dores articulares",
+      "Fraturas e infecções dentárias"
+    ],
+    "observacao": "O site NÃO cita faculdade de formação, ano exato de formatura, nome das especializações/mestrado, prêmios ou publicações. Há uma lacuna de credibilidade/E-E-A-T aqui que vale preencher no novo site com dados reais fornecidos pela clínica."
+  },
+
+  "credenciais_diferenciais": [
+    "Atendimento com horário agendado",
+    "Atendimento/abordagem personalizada",
+    "Protocolos rígidos de higiene e biossegurança contra Covid-19 (texto datado — vale revisar/atualizar tom para 2026)"
+  ],
+
+  "contato": {
+    "endereco": "Avenida Embaixador Abelardo Bueno, 3.500, Sala 919, Barra da Tijuca (Vision Offices), Rio de Janeiro",
+    "telefones": ["(21) 99047-2849", "(21) 2421-6156"],
+    "whatsapp": {
+      "numero_provavel": "(21) 99047-2849",
+      "observacao": "O site atual não rotula explicitamente nenhum número como 'WhatsApp' — apenas lista dois telefones. O (21) 99047-2849 é o mesmo número já usado como WhatsApp no Navbar do novo site."
+    },
+    "email": "rafaella.odontologia@gmail.com",
+    "horarios_atendimento": "Não publicados em nenhuma página do site atual — recomenda-se solicitar essa informação à clínica para o novo site."
+  },
+
+  "depoimentos": {
+    "encontrados_no_conteudo_real": [],
+    "observacao": "Não há depoimentos reais publicados. O tema WordPress tem um custom post type 'dt_customers' com 140 entradas, mas são todas dados de demonstração do template (nomes como 'aaa-bbb', 'john-wick', 'ret-rt', datados de 2016–2021) — não é conteúdo real da clínica. Recomenda-se coletar depoimentos reais de pacientes para o novo site."
+  },
+
+  "faq": {
+    "encontradas": [],
+    "observacao": "Nenhuma seção de FAQ existe no site atual — oportunidade clara para o novo site, especialmente para SEO (perguntas sobre Invisalign, dor, preço, duração de tratamento, etc., que não são respondidas hoje)."
+  },
+
+  "invisalign": {
+    "mencao_explicita_da_marca": false,
+    "termo_usado_no_site": "Alinhadores Invisíveis (termo genérico, sem citar marca)",
+    "observacao": "Como o novo site usa 'Invisalign Premium' como headline, isso é uma reposicionamento/rebranding em relação ao site atual — não uma continuidade de conteúdo existente. Confirmar com a clínica se ela é de fato uma provedora certificada Invisalign antes de usar a marca no novo site (implicação legal/uso de marca registrada)."
+  },
+
+  "redes_sociais": {
+    "instagram": "@dentistatop",
+    "facebook": null,
+    "outros": null
+  },
+
+  "seo": {
+    "title_tag_home": "Clínica Dra. Rafaella Gomes – Clínica Dra. Rafaella Gomes",
+    "meta_description": null,
+    "og_tags": null,
+    "meta_keywords": null,
+    "json_ld_schema": null,
+    "canonical_home": "https://clinicarafaellagomes.com.br/",
+    "robots_txt": "Sem bloqueios relevantes a conteúdo (apenas /wp-admin/ e rotas do WooCommerce).",
+    "palavras_chave_recorrentes": [
+      "Clínica Estética Odontológica",
+      "Lentes Dentais",
+      "Alinhadores",
+      "Botox",
+      "Implante",
+      "Prótese",
+      "Atendimento humanizado",
+      "Barra da Tijuca"
+    ],
+    "gaps_identificados": [
+      "Sem meta description em nenhuma página analisada — impacto direto no CTR do Google",
+      "Sem Open Graph / Twitter Cards — links compartilhados no WhatsApp/Instagram não geram preview",
+      "Sem dados estruturados (JSON-LD) de Dentist/LocalBusiness/MedicalClinic — perde rich snippets e destaque em 'perto de mim'",
+      "Title tag duplicado/genérico ('Clínica Dra. Rafaella Gomes – Clínica Dra. Rafaella Gomes'), sem palavra-chave de serviço + localização",
+      "Conteúdo de tratamento raso (1–2 frases por serviço), pouco conteúdo indexável para ranquear por long-tail",
+      "Site tem plugin WooCommerce ativo aparentemente sem uso (loja não identificada) — pode gerar páginas/sitemaps de produto vazios e diluir crawl budget",
+      "Sitemap expõe ~183 páginas de dados de demonstração do tema (43 'médicos' fake + 140 'clientes' fake + posts em Lorem Ipsum) que provavelmente estão sendo indexadas — risco de conteúdo de baixa qualidade/duplicado aos olhos do Google",
+      "Sem horário de atendimento publicado (campo importante para Google Business Profile / rich results)",
+      "Sem FAQ (perde FAQPage schema e a chance de responder objeções antes do WhatsApp)"
+    ]
+  }
+}

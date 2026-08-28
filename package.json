@@ -1,0 +1,28 @@
+{
+  "name": "clinica-rafaella",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@react-three/drei": "10",
+    "@react-three/fiber": "9",
+    "framer-motion": "11",
+    "next": "^16.3.3",
+    "react": "19",
+    "react-dom": "19",
+    "three": "0.160"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "26.4.0",
+    "@types/react": "19",
+    "@types/react-dom": "19",
+    "postcss": "^8.5.26",
+    "tailwindcss": "^4.3.3",
+    "typescript": "7.0.2"
+  }
+}

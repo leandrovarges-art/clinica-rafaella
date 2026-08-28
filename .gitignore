@@ -1,0 +1,24 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+build/
+
+# env
+.env.local
+.env*.local
+
+# vercel
+.vercel
+
+# logs
+*.log
+
+# os
+.DS_Store
+
+# editors
+.idea/
+.vscode/
