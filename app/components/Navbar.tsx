@@ -33,7 +33,7 @@ export default function Navbar() {
       initial="hidden"
       animate="visible"
       variants={staggerContainer}
-      className="fixed left-0 top-0 z-50 w-full border-b border-fog/40 bg-transparent"
+      className="absolute left-0 right-0 top-0 z-50 border-b border-fog/40 bg-transparent"
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3 sm:px-10">
         <motion.a href="#home" variants={fadeSlideUp} className="text-caption text-bone">

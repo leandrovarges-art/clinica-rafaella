@@ -99,55 +99,52 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="bg-obsidian">
+      <main className="overflow-x-hidden bg-obsidian">
         {/* HERO */}
-        <section id="home" className="bg-obsidian px-6 pb-20 pt-[120px] sm:px-10">
-          <motion.div
+        <section id="home" className="relative">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <motion.img
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="relative mx-auto h-[85vh] min-h-[600px] w-full max-w-6xl overflow-hidden rounded-xl shadow-2xl"
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/dra-rafaella-hero.jpg"
-              alt="Dra. Rafaella Gomes segurando um alinhador Invisalign, com o consultório ao fundo"
-              className="h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+            src="/images/dra-rafaella-hero.jpg"
+            alt="Dra. Rafaella Gomes segurando um alinhador Invisalign, com o consultório ao fundo"
+            className="block h-screen w-screen rounded-none object-cover object-center"
+          />
 
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={staggerContainer}
-              className="absolute bottom-20 left-0 px-8 sm:px-12"
+          <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/60 to-transparent" />
+
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
+            className="absolute bottom-20 left-8 z-20"
+          >
+            <motion.h1
+              variants={fadeSlideUp}
+              className="text-heading font-medium tracking-[3px] text-bone"
             >
-              <motion.h1
-                variants={fadeSlideUp}
-                className="text-heading font-medium tracking-[3px] text-bone"
-              >
-                Dra. Rafaella Gomes
-              </motion.h1>
-              <motion.p
-                variants={fadeSlideUp}
-                className="mt-3 text-[17px] font-medium tracking-[0.75px] text-iris"
-              >
-                Invisalign TOP DOCTOR
-              </motion.p>
-              <motion.p variants={fadeSlideUp} className="mt-3 text-body-lg text-bone">
-                Invisalign especialista
-              </motion.p>
-              <motion.div variants={fadeSlideUp} className="mt-3 h-px w-[80px] bg-bone" />
-              <motion.a
-                variants={fadeSlideUp}
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${pillClass} mt-8`}
-              >
-                Agendar Consulta
-              </motion.a>
-            </motion.div>
+              Dra. Rafaella Gomes
+            </motion.h1>
+            <motion.p
+              variants={fadeSlideUp}
+              className="mt-3 text-[17px] font-medium tracking-[0.75px] text-iris"
+            >
+              Invisalign TOP DOCTOR
+            </motion.p>
+            <motion.p variants={fadeSlideUp} className="mt-3 text-body-lg text-bone">
+              Invisalign especialista
+            </motion.p>
+            <motion.div variants={fadeSlideUp} className="mt-3 h-px w-[80px] bg-bone" />
+            <motion.a
+              variants={fadeSlideUp}
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${pillClass} mt-8`}
+            >
+              Agendar Consulta
+            </motion.a>
           </motion.div>
         </section>
 
