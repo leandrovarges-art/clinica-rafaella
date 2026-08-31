@@ -226,6 +226,43 @@ export default function Home() {
           </div>
         </section>
 
+        {/* SOBRE */}
+        <section id="sobre" className="bg-canvas px-4 pb-[120px] pt-[120px]">
+          <div className="mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-2">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <motion.img
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+              src="/images/dra-rafaella-about.jpg"
+              alt="Dra. Rafaella Gomes"
+              className="h-auto w-full max-w-[500px] rounded-3xl object-cover shadow-sm"
+            />
+
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={staggerContainer}
+              className="text-left"
+            >
+              <motion.h2 variants={fadeSlideUp} className="mb-6 text-heading font-bold text-ink">
+                Sobre a Dra. Rafaella Gomes
+              </motion.h2>
+              <motion.p
+                variants={fadeSlideUp}
+                className="text-[18px] font-medium leading-[1.66] tracking-[-0.45px] text-pencil"
+              >
+                Formada há 25 anos com Mestrado e Especialidades em diversas áreas da odontologia,
+                a Dra. Rafaella Gomes tem o propósito de preservar a saúde, o sorriso e a
+                qualidade de vida de seus pacientes, a partir de um atendimento personalizado,
+                ético e profissional.
+              </motion.p>
+            </motion.div>
+          </div>
+        </section>
+
         {/* CONTATO */}
         <section id="contato" className="bg-canvas px-6 py-16 sm:px-10">
           <div className="mx-auto max-w-[1200px]">

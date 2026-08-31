@@ -47,7 +47,7 @@ export default function InvisalignViewer() {
             }
             src="/images/invisalign-device.png"
             alt="Invisalign"
-            className="h-auto w-full max-w-[300px] rounded-3xl object-contain shadow-sm sm:max-w-[500px]"
+            className="h-auto w-full max-w-[300px] object-contain sm:max-w-[500px]"
             style={{ transformOrigin: 'center center' }}
           />
         </div>

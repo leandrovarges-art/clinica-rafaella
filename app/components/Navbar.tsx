@@ -7,6 +7,7 @@ const NAV_LINKS = [
   { label: 'Home', href: '#home' },
   { label: 'Como Funciona', href: '#como-funciona' },
   { label: 'Tratamentos', href: '#tratamentos' },
+  { label: 'Sobre', href: '#sobre' },
   { label: 'Contato', href: '#contato' },
 ]
 
