@@ -56,42 +56,42 @@ const TREATMENTS = [
   {
     title: 'Lentes de Contato',
     description: 'Lentes de contato dental para um sorriso natural, alinhado e duradouro.',
-    special: false,
+    image: '/images/tratamentos/lentes-de-contato.jpg',
   },
   {
     title: 'Clareamento',
     description: 'Clareamento dental profissional com resultados visíveis e seguros.',
-    special: false,
+    image: '/images/tratamentos/clareamento.jpg',
   },
   {
     title: 'Restaurações',
     description: 'Restaurações estéticas e funcionais com materiais de alta qualidade.',
-    special: false,
+    image: '/images/tratamentos/restauracoes.jpg',
   },
   {
     title: 'Harmonização',
     description: 'Harmonização orofacial para equilíbrio, simetria e naturalidade.',
-    special: false,
+    image: '/images/tratamentos/harmonizacao.jpg',
   },
   {
     title: 'Invisalign TOP DOCTOR',
     description: 'Alinhadores invisíveis para corrigir o sorriso sem aparelho fixo.',
-    special: true,
+    image: '/images/tratamentos/invisalign.jpg',
   },
   {
     title: 'Limpeza',
     description: 'Profilaxia e limpeza profunda para manter a saúde bucal em dia.',
-    special: false,
+    image: '/images/tratamentos/limpeza.jpg',
   },
   {
     title: 'Laserterapia',
     description: 'Tratamentos a laser de alta precisão, com mínima invasão e desconforto.',
-    special: false,
+    image: '/images/tratamentos/laserterapia.jpg',
   },
   {
     title: 'Tratamento Ronco/Apneia',
     description: 'Aparelhos intraorais para tratar ronco e apneia obstrutiva do sono.',
-    special: false,
+    image: '/images/tratamentos/ronco-apneia.jpg',
   },
 ]
 
@@ -149,7 +149,7 @@ export default function Home() {
         </section>
 
         {/* INVISALIGN 3D */}
-        <section id="invisalign-3d" className="bg-obsidian px-6 py-40 sm:px-20">
+        <section id="invisalign-3d" className="bg-bone px-6 py-40 sm:px-20">
           <div className="mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-2">
             <InvisalignViewer />
 
@@ -162,11 +162,11 @@ export default function Home() {
             >
               <motion.h2
                 variants={fadeSlideUp}
-                className="text-heading font-medium tracking-[0.05em] text-bone"
+                className="text-heading font-medium tracking-[0.05em] text-obsidian"
               >
                 Invisalign 3D
               </motion.h2>
-              <motion.p variants={fadeSlideUp} className="mt-8 text-body-lg text-bone">
+              <motion.p variants={fadeSlideUp} className="mt-8 text-body-lg text-obsidian">
                 Veja o alinhador em ação — tecnologia de vidro cristal, direto no seu navegador.
               </motion.p>
               <motion.a
@@ -183,14 +183,14 @@ export default function Home() {
         </section>
 
         {/* COMO FUNCIONA */}
-        <section id="como-funciona" className="bg-obsidian px-6 py-40 sm:px-20">
+        <section id="como-funciona" className="bg-bone px-6 py-40 sm:px-20">
           <div className="mx-auto max-w-6xl">
             <motion.h2
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.6, ease: 'easeOut' }}
-              className="text-heading font-medium tracking-[0.05em] text-bone"
+              className="text-heading font-medium tracking-[0.05em] text-obsidian"
             >
               Como Funciona
             </motion.h2>
@@ -203,11 +203,11 @@ export default function Home() {
               className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
             >
               {STEPS.map((step) => (
-                <motion.div key={step.number} variants={fadeSlideUp} className="border-t border-fog/30 pt-6">
+                <motion.div key={step.number} variants={fadeSlideUp} className="border-t border-fog pt-6">
                   <span className="text-[17px] font-medium tracking-[0.05em] text-iris">
                     {step.number}
                   </span>
-                  <h3 className="mt-3 text-[17px] font-medium tracking-[0.05em] text-bone">
+                  <h3 className="mt-3 text-[17px] font-medium tracking-[0.05em] text-obsidian">
                     {step.title}
                   </h3>
                   <p className="mt-3 text-[14px] tracking-[0.05em] text-fog">{step.description}</p>
@@ -218,14 +218,14 @@ export default function Home() {
         </section>
 
         {/* TRATAMENTOS */}
-        <section id="tratamentos" className="bg-obsidian px-6 py-40 sm:px-20">
+        <section id="tratamentos" className="bg-bone px-6 py-40 sm:px-20">
           <div className="mx-auto max-w-6xl">
             <motion.h2
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.6, ease: 'easeOut' }}
-              className="text-heading font-medium tracking-[0.05em] text-bone"
+              className="text-heading font-medium tracking-[0.05em] text-obsidian"
             >
               Tratamentos
             </motion.h2>
@@ -235,26 +235,40 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.15 }}
               variants={staggerContainer}
-              className="mt-16 grid grid-cols-1 gap-3 md:grid-cols-2"
+              className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
             >
               {TREATMENTS.map((treatment) => (
                 <motion.div
                   key={treatment.title}
                   variants={fadeSlideUp}
-                  whileHover={{ backgroundColor: '#ffffff' }}
+                  whileHover={{ borderColor: '#8b7d3e' }}
                   transition={{ duration: 0.3, ease: 'easeOut' }}
-                  className={`group rounded-card p-8 ${treatment.special ? 'bg-iris' : 'bg-graphite'}`}
+                  className="border border-fog bg-bone"
                 >
-                  <h3 className="text-[17px] font-medium tracking-[0.05em] text-bone transition-colors duration-300 group-hover:text-black">
-                    {treatment.title}
-                  </h3>
-                  <p
-                    className={`mt-3 text-[14px] tracking-[0.05em] transition-colors duration-300 group-hover:text-black ${
-                      treatment.special ? 'text-bone' : 'text-fog'
-                    }`}
-                  >
-                    {treatment.description}
-                  </p>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={treatment.image}
+                    alt={treatment.title}
+                    className="h-[250px] w-full rounded-none object-cover"
+                  />
+                  <div className="p-5">
+                    <h3 className="text-[17px] font-medium tracking-[0.05em] text-obsidian">
+                      {treatment.title}
+                    </h3>
+                    <p className="mt-3 text-[14px] tracking-[0.05em] text-fog">
+                      {treatment.description}
+                    </p>
+                    <a
+                      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+                        `Olá! Gostaria de saber mais sobre o tratamento de ${treatment.title}.`
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center gap-1 text-[14px] font-medium tracking-[0.05em] text-gold transition-colors hover:text-obsidian"
+                    >
+                      Saiba Mais →
+                    </a>
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
@@ -262,14 +276,14 @@ export default function Home() {
         </section>
 
         {/* CONTATO */}
-        <section id="contato" className="bg-obsidian px-6 py-40 sm:px-20">
+        <section id="contato" className="bg-bone px-6 py-40 sm:px-20">
           <div className="mx-auto max-w-6xl">
             <motion.h2
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.6, ease: 'easeOut' }}
-              className="text-heading font-medium tracking-[0.05em] text-bone"
+              className="text-heading font-medium tracking-[0.05em] text-obsidian"
             >
               Fale Conosco
             </motion.h2>
