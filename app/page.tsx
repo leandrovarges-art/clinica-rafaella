@@ -99,38 +99,58 @@ export default function Home() {
             className="block h-screen w-screen object-cover object-center"
           />
 
-          <div className="bg-canvas px-6 py-16 sm:px-10">
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={staggerContainer}
-              className="mx-auto max-w-[1200px]"
+          <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/60 to-transparent" />
+
+          <div className="absolute bottom-20 left-8 z-20 px-8 sm:px-12">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="font-serif text-[40px] font-normal leading-none tracking-[-0.025em] text-white sm:text-[80px]"
             >
-              <motion.p
-                variants={fadeSlideUp}
-                className="text-body-sm font-semibold uppercase tracking-[0.05em] text-graphite"
-              >
-                Invisalign TOP DOCTOR
-              </motion.p>
-              <motion.h1
-                variants={fadeSlideUp}
-                className="mt-2 font-serif text-[80px] font-normal leading-[1.05] tracking-[-0.025em] text-ink sm:text-display"
-              >
-                Dra. Rafaella Gomes
-              </motion.h1>
-              <motion.p variants={fadeSlideUp} className="mt-4 text-body text-pencil">
-                Invisalign especialista
-              </motion.p>
-              <motion.a
-                variants={fadeSlideUp}
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${darkButtonClass} mt-8`}
-              >
-                Agendar Consulta
-              </motion.a>
-            </motion.div>
+              O sorriso dos seus sonhos agora é real
+            </motion.p>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="mt-2 font-serif text-[48px] font-normal leading-[1.05] tracking-[-0.025em] text-white sm:text-display"
+            >
+              Dra. Rafaella Gomes
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="mt-4 text-body-sm font-semibold uppercase tracking-[0.05em] text-white"
+            >
+              Invisalign TOP DOCTOR
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="mt-4 text-body text-white"
+            >
+              Invisalign especialista
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.55 }}
+              className="mt-6 h-px w-[80px] bg-white"
+            />
+            <motion.a
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${darkButtonClass} mt-8`}
+            >
+              Agendar Consulta
+            </motion.a>
           </div>
         </section>
 
