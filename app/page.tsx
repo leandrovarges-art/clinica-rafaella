@@ -8,9 +8,6 @@ const WHATSAPP_NUMBER = '5521990472849'
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   'Olá! Gostaria de agendar uma consulta na Clínica Dra. Rafaella.'
 )}`
-const INVISALIGN_WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  'Olá! Gostaria de solicitar uma visualização 3D do Invisalign.'
-)}`
 
 const fadeSlideUp = {
   hidden: { opacity: 0, y: 24 },
@@ -148,35 +145,7 @@ export default function Home() {
         </section>
 
         {/* INVISALIGN 3D */}
-        <section id="invisalign-3d" className="bg-canvas px-6 py-16 sm:px-10">
-          <div className="mx-auto grid max-w-[1200px] items-center gap-16 lg:grid-cols-2">
-            <InvisalignViewer />
-
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={staggerContainer}
-              className="text-left"
-            >
-              <motion.h2 variants={fadeSlideUp} className="text-heading font-bold text-ink">
-                Invisalign 3D
-              </motion.h2>
-              <motion.p variants={fadeSlideUp} className="mt-6 text-body text-pencil">
-                Veja o alinhador em ação — tecnologia de vidro cristal, direto no seu navegador.
-              </motion.p>
-              <motion.a
-                variants={fadeSlideUp}
-                href={INVISALIGN_WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${darkButtonClass} mt-8`}
-              >
-                Solicitar Visualização 3D
-              </motion.a>
-            </motion.div>
-          </div>
-        </section>
+        <InvisalignViewer />
 
         {/* COMO FUNCIONA */}
         <section id="como-funciona" className="bg-canvas px-6 py-16 sm:px-10">
