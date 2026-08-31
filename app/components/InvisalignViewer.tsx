@@ -1,13 +1,12 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 
 const WHATSAPP_NUMBER = '5521990472849'
 const INVISALIGN_WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   'Olá! Gostaria de solicitar uma visualização do Invisalign.'
 )}`
-
-const EASE = [0.4, 0, 0.2, 1] as const
 
 const staggerContainer = {
   hidden: {},
@@ -20,28 +19,38 @@ const fadeSlideUp = {
 }
 
 export default function InvisalignViewer() {
+  // Drives the handoff from the one-time entrance animation to the
+  // continuous infinite spin — both animate rotateY, so they can't be
+  // expressed as separate whileInView/animate props without fighting.
+  const [hasEntered, setHasEntered] = useState(false)
+
   return (
     <section id="invisalign-3d" className="bg-canvas px-4 py-20">
       <div className="mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-2">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.4, ease: EASE }}
-          className="flex justify-center"
-        >
+        <div className="flex justify-center" style={{ perspective: 1200 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <motion.img
-            initial={{ scale: 0.9, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
+            initial={{ opacity: 0, scale: 0.8, rotateY: -90 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}
-            whileHover={{ rotate: 1.5 }}
-            transition={{ duration: 0.4, ease: EASE }}
+            onViewportEnter={() => setHasEntered(true)}
+            animate={{ rotateY: hasEntered ? 360 : 0 }}
+            transition={
+              hasEntered
+                ? { rotateY: { duration: 6, repeat: Infinity, ease: 'linear' } }
+                : { duration: 0.8 }
+            }
+            whileHover={
+              hasEntered
+                ? { rotateY: 720, transition: { duration: 3, repeat: Infinity, ease: 'linear' } }
+                : undefined
+            }
             src="/images/invisalign-device.png"
             alt="Invisalign"
             className="h-auto w-full max-w-[300px] rounded-3xl object-contain shadow-sm sm:max-w-[500px]"
+            style={{ transformOrigin: 'center center' }}
           />
-        </motion.div>
+        </div>
 
         <motion.div
           initial="hidden"

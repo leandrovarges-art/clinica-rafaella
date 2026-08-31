@@ -51,44 +51,34 @@ const STEPS = [
 
 const TREATMENTS = [
   {
-    title: 'Lentes de Contato',
+    title: 'Lentes de Contato Dental',
     description: 'Lentes de contato dental para um sorriso natural, alinhado e duradouro.',
     image: '/images/tratamentos/lentes-de-contato.jpg',
   },
   {
-    title: 'Clareamento',
+    title: 'Clareamento Dental',
     description: 'Clareamento dental profissional com resultados visíveis e seguros.',
     image: '/images/tratamentos/clareamento.jpg',
   },
   {
-    title: 'Restaurações',
+    title: 'Restaurações/Obturações',
     description: 'Restaurações estéticas e funcionais com materiais de alta qualidade.',
     image: '/images/tratamentos/restauracoes.jpg',
   },
   {
-    title: 'Harmonização',
+    title: 'Harmonização Orofacial',
     description: 'Harmonização orofacial para equilíbrio, simetria e naturalidade.',
     image: '/images/tratamentos/harmonizacao.jpg',
   },
   {
-    title: 'Invisalign TOP DOCTOR',
+    title: 'Invisalign',
     description: 'Alinhadores invisíveis para corrigir o sorriso sem aparelho fixo.',
     image: '/images/tratamentos/invisalign.jpg',
   },
   {
-    title: 'Limpeza',
+    title: 'Limpeza Profissional',
     description: 'Profilaxia e limpeza profunda para manter a saúde bucal em dia.',
     image: '/images/tratamentos/limpeza.jpg',
-  },
-  {
-    title: 'Laserterapia',
-    description: 'Tratamentos a laser de alta precisão, com mínima invasão e desconforto.',
-    image: '/images/tratamentos/laserterapia.jpg',
-  },
-  {
-    title: 'Tratamento Ronco/Apneia',
-    description: 'Aparelhos intraorais para tratar ronco e apneia obstrutiva do sono.',
-    image: '/images/tratamentos/ronco-apneia.jpg',
   },
 ]
 
