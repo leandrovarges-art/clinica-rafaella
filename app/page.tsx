@@ -22,8 +22,8 @@ const staggerContainer = {
   visible: { transition: { staggerChildren: 0.1 } },
 }
 
-const pillClass =
-  'inline-block rounded-pill bg-iris px-[22px] py-[12px] text-caption text-bone shadow-inset-ring'
+const darkButtonClass =
+  'inline-block rounded-btn border border-graphite bg-graphite px-[22px] py-[14px] text-body-sm font-semibold text-canvas shadow-btn-inset transition-colors hover:bg-white hover:text-graphite'
 
 const STEPS = [
   {
@@ -99,7 +99,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="overflow-x-hidden bg-obsidian">
+      <main className="overflow-x-hidden bg-canvas">
         {/* HERO */}
         <section id="home" className="relative">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -109,48 +109,47 @@ export default function Home() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             src="/images/dra-rafaella-hero.jpg"
             alt="Dra. Rafaella Gomes segurando um alinhador Invisalign, com o consultório ao fundo"
-            className="block h-screen w-screen rounded-none object-cover object-center"
+            className="block h-screen w-screen object-cover object-center"
           />
 
-          <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/60 to-transparent" />
-
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
-            className="absolute bottom-20 left-8 z-20"
-          >
-            <motion.h1
-              variants={fadeSlideUp}
-              className="text-heading font-medium tracking-[3px] text-bone"
+          <div className="bg-canvas px-6 py-16 sm:px-10">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+              className="mx-auto max-w-[1200px]"
             >
-              Dra. Rafaella Gomes
-            </motion.h1>
-            <motion.p
-              variants={fadeSlideUp}
-              className="mt-3 text-[17px] font-medium tracking-[0.75px] text-iris"
-            >
-              Invisalign TOP DOCTOR
-            </motion.p>
-            <motion.p variants={fadeSlideUp} className="mt-3 text-body-lg text-bone">
-              Invisalign especialista
-            </motion.p>
-            <motion.div variants={fadeSlideUp} className="mt-3 h-px w-[80px] bg-bone" />
-            <motion.a
-              variants={fadeSlideUp}
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${pillClass} mt-8`}
-            >
-              Agendar Consulta
-            </motion.a>
-          </motion.div>
+              <motion.p
+                variants={fadeSlideUp}
+                className="text-body-sm font-semibold uppercase tracking-[0.05em] text-graphite"
+              >
+                Invisalign TOP DOCTOR
+              </motion.p>
+              <motion.h1
+                variants={fadeSlideUp}
+                className="mt-2 font-serif text-[80px] font-normal leading-[1.05] tracking-[-0.025em] text-ink sm:text-display"
+              >
+                Dra. Rafaella Gomes
+              </motion.h1>
+              <motion.p variants={fadeSlideUp} className="mt-4 text-body text-pencil">
+                Invisalign especialista
+              </motion.p>
+              <motion.a
+                variants={fadeSlideUp}
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${darkButtonClass} mt-8`}
+              >
+                Agendar Consulta
+              </motion.a>
+            </motion.div>
+          </div>
         </section>
 
         {/* INVISALIGN 3D */}
-        <section id="invisalign-3d" className="bg-bone px-6 py-40 sm:px-20">
-          <div className="mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-2">
+        <section id="invisalign-3d" className="bg-canvas px-6 py-16 sm:px-10">
+          <div className="mx-auto grid max-w-[1200px] items-center gap-16 lg:grid-cols-2">
             <InvisalignViewer />
 
             <motion.div
@@ -160,13 +159,10 @@ export default function Home() {
               variants={staggerContainer}
               className="text-left"
             >
-              <motion.h2
-                variants={fadeSlideUp}
-                className="text-heading font-medium tracking-[0.05em] text-obsidian"
-              >
+              <motion.h2 variants={fadeSlideUp} className="text-heading font-bold text-ink">
                 Invisalign 3D
               </motion.h2>
-              <motion.p variants={fadeSlideUp} className="mt-8 text-body-lg text-obsidian">
+              <motion.p variants={fadeSlideUp} className="mt-6 text-body text-pencil">
                 Veja o alinhador em ação — tecnologia de vidro cristal, direto no seu navegador.
               </motion.p>
               <motion.a
@@ -174,7 +170,7 @@ export default function Home() {
                 href={INVISALIGN_WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${pillClass} mt-8`}
+                className={`${darkButtonClass} mt-8`}
               >
                 Solicitar Visualização 3D
               </motion.a>
@@ -183,14 +179,14 @@ export default function Home() {
         </section>
 
         {/* COMO FUNCIONA */}
-        <section id="como-funciona" className="bg-bone px-6 py-40 sm:px-20">
-          <div className="mx-auto max-w-6xl">
+        <section id="como-funciona" className="bg-canvas px-6 py-16 sm:px-10">
+          <div className="mx-auto max-w-[1200px]">
             <motion.h2
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.6, ease: 'easeOut' }}
-              className="text-heading font-medium tracking-[0.05em] text-obsidian"
+              className="text-heading font-bold text-ink"
             >
               Como Funciona
             </motion.h2>
@@ -203,14 +199,14 @@ export default function Home() {
               className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
             >
               {STEPS.map((step) => (
-                <motion.div key={step.number} variants={fadeSlideUp} className="border-t border-fog pt-6">
-                  <span className="text-[17px] font-medium tracking-[0.05em] text-iris">
-                    {step.number}
-                  </span>
-                  <h3 className="mt-3 text-[17px] font-medium tracking-[0.05em] text-obsidian">
-                    {step.title}
-                  </h3>
-                  <p className="mt-3 text-[14px] tracking-[0.05em] text-fog">{step.description}</p>
+                <motion.div
+                  key={step.number}
+                  variants={fadeSlideUp}
+                  className="border-t border-hairline pt-6 text-center"
+                >
+                  <span className="text-body-sm font-semibold text-graphite">{step.number}</span>
+                  <h3 className="mt-2 text-subheading font-semibold text-ink">{step.title}</h3>
+                  <p className="mt-2 text-body-sm text-pencil">{step.description}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -218,14 +214,14 @@ export default function Home() {
         </section>
 
         {/* TRATAMENTOS */}
-        <section id="tratamentos" className="bg-bone px-6 py-40 sm:px-20">
-          <div className="mx-auto max-w-6xl">
+        <section id="tratamentos" className="bg-canvas px-6 py-16 sm:px-10">
+          <div className="mx-auto max-w-[1200px]">
             <motion.h2
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.6, ease: 'easeOut' }}
-              className="text-heading font-medium tracking-[0.05em] text-obsidian"
+              className="text-heading font-bold text-ink"
             >
               Tratamentos
             </motion.h2>
@@ -241,30 +237,26 @@ export default function Home() {
                 <motion.div
                   key={treatment.title}
                   variants={fadeSlideUp}
-                  whileHover={{ borderColor: '#8b7d3e' }}
+                  whileHover={{ scale: 1.02, backgroundColor: '#f5f5f5' }}
                   transition={{ duration: 0.3, ease: 'easeOut' }}
-                  className="border border-fog bg-bone"
+                  className="overflow-hidden rounded-card border border-hairline bg-card"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={treatment.image}
                     alt={treatment.title}
-                    className="h-[250px] w-full rounded-none object-cover"
+                    className="h-[250px] w-full object-cover"
                   />
-                  <div className="p-5">
-                    <h3 className="text-[17px] font-medium tracking-[0.05em] text-obsidian">
-                      {treatment.title}
-                    </h3>
-                    <p className="mt-3 text-[14px] tracking-[0.05em] text-fog">
-                      {treatment.description}
-                    </p>
+                  <div className="p-6">
+                    <h3 className="text-subheading font-semibold text-ink">{treatment.title}</h3>
+                    <p className="mt-2 text-body-sm text-pencil">{treatment.description}</p>
                     <a
                       href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
                         `Olá! Gostaria de saber mais sobre o tratamento de ${treatment.title}.`
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-4 inline-flex items-center gap-1 text-[14px] font-medium tracking-[0.05em] text-gold transition-colors hover:text-obsidian"
+                      className="mt-4 inline-flex items-center gap-1 text-body-sm font-semibold text-graphite transition-colors hover:text-ink"
                     >
                       Saiba Mais →
                     </a>
@@ -276,14 +268,14 @@ export default function Home() {
         </section>
 
         {/* CONTATO */}
-        <section id="contato" className="bg-bone px-6 py-40 sm:px-20">
-          <div className="mx-auto max-w-6xl">
+        <section id="contato" className="bg-canvas px-6 py-16 sm:px-10">
+          <div className="mx-auto max-w-[1200px]">
             <motion.h2
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.6, ease: 'easeOut' }}
-              className="text-heading font-medium tracking-[0.05em] text-obsidian"
+              className="text-heading font-bold text-ink"
             >
               Fale Conosco
             </motion.h2>
@@ -293,33 +285,54 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={staggerContainer}
-              className="mt-16 grid grid-cols-1 gap-3 md:grid-cols-3"
+              className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-3"
             >
-              <motion.div variants={fadeSlideUp} className="rounded-card bg-graphite p-8">
-                <p className="text-caption uppercase text-fog">Telefone</p>
+              <motion.div
+                variants={fadeSlideUp}
+                whileHover={{ scale: 1.02, backgroundColor: '#f5f5f5' }}
+                transition={{ duration: 0.3, ease: 'easeOut' }}
+                className="rounded-card border border-hairline bg-card p-6"
+              >
+                <p className="text-body-sm font-semibold uppercase tracking-[0.05em] text-faint">
+                  Telefone
+                </p>
                 <a
                   href="tel:+5521990472849"
-                  className="mt-3 inline-block text-[17px] tracking-[0.05em] text-bone underline decoration-fog underline-offset-4 transition-colors hover:text-fog"
+                  className="mt-2 inline-block text-subheading font-semibold text-ink transition-colors hover:text-pencil"
                 >
                   +55 (21) 99047-2849
                 </a>
               </motion.div>
 
-              <motion.div variants={fadeSlideUp} className="rounded-card bg-graphite p-8">
-                <p className="text-caption uppercase text-fog">WhatsApp</p>
+              <motion.div
+                variants={fadeSlideUp}
+                whileHover={{ scale: 1.02, backgroundColor: '#f5f5f5' }}
+                transition={{ duration: 0.3, ease: 'easeOut' }}
+                className="rounded-card border border-hairline bg-card p-6"
+              >
+                <p className="text-body-sm font-semibold uppercase tracking-[0.05em] text-faint">
+                  WhatsApp
+                </p>
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`${pillClass} mt-3`}
+                  className={`${darkButtonClass} mt-3`}
                 >
                   WhatsApp
                 </a>
               </motion.div>
 
-              <motion.div variants={fadeSlideUp} className="rounded-card bg-graphite p-8">
-                <p className="text-caption uppercase text-fog">Endereço</p>
-                <p className="mt-3 text-[17px] tracking-[0.05em] text-bone">
+              <motion.div
+                variants={fadeSlideUp}
+                whileHover={{ scale: 1.02, backgroundColor: '#f5f5f5' }}
+                transition={{ duration: 0.3, ease: 'easeOut' }}
+                className="rounded-card border border-hairline bg-card p-6"
+              >
+                <p className="text-body-sm font-semibold uppercase tracking-[0.05em] text-faint">
+                  Endereço
+                </p>
+                <p className="mt-2 text-subheading font-semibold text-ink">
                   Av. Embaixador Abelardo Bueno, 3500, Barra da Tijuca
                 </p>
               </motion.div>
@@ -328,9 +341,9 @@ export default function Home() {
         </section>
 
         {/* FOOTER */}
-        <footer className="border-t border-fog/40 bg-graphite px-6 py-10 sm:px-20">
-          <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 sm:flex-row">
-            <p className="text-caption text-bone">
+        <footer className="border-t border-hairline bg-card px-6 py-10 sm:px-10">
+          <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-6 sm:flex-row">
+            <p className="text-body-sm text-ink">
               © {new Date().getFullYear()} Clínica Dra. Rafaella Gomes — CRO-RJ 22601
             </p>
             <div className="flex items-center gap-6">
@@ -338,7 +351,7 @@ export default function Home() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-caption text-bone transition-colors hover:text-fog"
+                className="text-body-sm text-ink transition-colors hover:text-pencil"
               >
                 WhatsApp
               </a>
@@ -346,7 +359,7 @@ export default function Home() {
                 href="https://www.instagram.com/dentistatop/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-caption text-bone transition-colors hover:text-fog"
+                className="text-body-sm text-ink transition-colors hover:text-pencil"
               >
                 Instagram
               </a>

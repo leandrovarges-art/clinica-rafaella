@@ -25,6 +25,9 @@ const staggerContainer = {
   visible: { transition: { staggerChildren: 0.1 } },
 }
 
+const whatsappBtnClass =
+  'rounded-btn border border-graphite bg-graphite px-[22px] py-[12px] text-body-sm font-semibold text-canvas shadow-btn-inset transition-colors hover:bg-white hover:text-graphite'
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -33,10 +36,10 @@ export default function Navbar() {
       initial="hidden"
       animate="visible"
       variants={staggerContainer}
-      className="absolute left-0 right-0 top-0 z-50 border-b border-fog/40 bg-transparent"
+      className="absolute left-0 right-0 top-0 z-50 bg-transparent"
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3 sm:px-10">
-        <motion.a href="#home" variants={fadeSlideUp} className="text-caption text-bone">
+      <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-3 sm:px-10">
+        <motion.a href="#home" variants={fadeSlideUp} className="text-body-sm text-white">
           © Clínica Dra. Rafaella
         </motion.a>
 
@@ -47,7 +50,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               variants={fadeSlideUp}
-              className="text-caption text-bone transition-colors hover:text-fog"
+              className="text-body-sm text-white transition-colors hover:text-white/70"
             >
               {link.label}
             </motion.a>
@@ -57,7 +60,7 @@ export default function Navbar() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-pill bg-iris px-[22px] py-[12px] text-caption text-bone shadow-inset-ring"
+            className={whatsappBtnClass}
           >
             WhatsApp
           </motion.a>
@@ -73,15 +76,15 @@ export default function Navbar() {
         >
           <motion.span
             animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-            className="h-px w-6 bg-bone"
+            className="h-px w-6 bg-white"
           />
           <motion.span
             animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
-            className="h-px w-6 bg-bone"
+            className="h-px w-6 bg-white"
           />
           <motion.span
             animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-            className="h-px w-6 bg-bone"
+            className="h-px w-6 bg-white"
           />
         </button>
       </nav>
@@ -94,14 +97,14 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="flex flex-col overflow-hidden border-t border-fog/40 bg-obsidian md:hidden"
+            className="flex flex-col overflow-hidden bg-canvas md:hidden"
           >
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="border-b border-fog/20 px-6 py-4 text-caption text-bone transition-colors hover:text-fog"
+                className="border-b border-hairline px-6 py-4 text-body-sm text-ink transition-colors hover:text-pencil"
               >
                 {link.label}
               </a>
@@ -110,7 +113,7 @@ export default function Navbar() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="m-6 rounded-pill bg-iris px-[22px] py-[12px] text-center text-caption text-bone shadow-inset-ring"
+              className={`${whatsappBtnClass} m-6 text-center`}
             >
               WhatsApp
             </a>

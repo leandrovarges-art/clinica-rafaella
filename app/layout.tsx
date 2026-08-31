@@ -1,12 +1,19 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Instrument_Serif } from 'next/font/google'
 import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_DESCRIPTION, dentistJsonLd } from '@/lib/seo'
 import './globals.css'
 
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['500'],
+  weight: ['500', '600', '700'],
   variable: '--font-inter',
+})
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ['latin'],
+  weight: ['400'],
+  style: ['normal', 'italic'],
+  variable: '--font-instrument-serif',
 })
 
 export const metadata: Metadata = {
@@ -44,7 +51,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR" className={inter.variable}>
+    <html lang="pt-BR" className={`${inter.variable} ${instrumentSerif.variable}`}>
       <body>
         {children}
         <script

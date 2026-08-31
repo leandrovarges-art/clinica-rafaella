@@ -45,9 +45,9 @@ function AlignerModel({ hoveredRef }: { hoveredRef: RefObject<boolean> }) {
 function Scene({ hoveredRef }: { hoveredRef: RefObject<boolean> }) {
   return (
     <>
-      <ambientLight intensity={0.6} />
+      <ambientLight intensity={0.7} />
       <pointLight position={[3, 3, 3]} intensity={1.4} color="#ffffff" />
-      <pointLight position={[-3, -2, 2]} intensity={0.6} color="#455ce9" />
+      <pointLight position={[-3, -2, 2]} intensity={0.5} color="#ffffff" />
       <Suspense fallback={null}>
         <Environment preset="studio" />
         <AlignerModel hoveredRef={hoveredRef} />
@@ -79,7 +79,7 @@ export default function InvisalignViewer() {
       onMouseLeave={() => {
         hoveredRef.current = false
       }}
-      className="mx-auto aspect-square w-full max-w-md overflow-hidden rounded-card bg-graphite shadow-inset-ring"
+      className="mx-auto aspect-square w-full max-w-md overflow-hidden rounded-card border border-hairline bg-card"
     >
       {mounted && (
         <Canvas camera={{ position: [0, 0, 5], fov: 40 }} gl={{ alpha: true }}>

@@ -15,15 +15,15 @@ export default async function OpengraphImage() {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: '#1c1d20',
+          backgroundColor: '#fafafa',
           padding: '80px',
         }}
       >
         <div
           style={{
             fontSize: 40,
-            fontWeight: 500,
-            color: '#455ce9',
+            fontWeight: 600,
+            color: '#242424',
             marginBottom: 28,
           }}
         >
@@ -32,8 +32,8 @@ export default async function OpengraphImage() {
         <div
           style={{
             fontSize: 68,
-            fontWeight: 500,
-            color: '#ffffff',
+            fontWeight: 400,
+            color: '#171717',
             textAlign: 'center',
             lineHeight: 1.15,
           }}
@@ -43,7 +43,7 @@ export default async function OpengraphImage() {
         <div
           style={{
             fontSize: 32,
-            color: '#999d9e',
+            color: '#5c5c5c',
             marginTop: 32,
             textAlign: 'center',
           }}
