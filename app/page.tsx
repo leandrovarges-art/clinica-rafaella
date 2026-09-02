@@ -19,6 +19,11 @@ const staggerContainer = {
   visible: { transition: { staggerChildren: 0.1 } },
 }
 
+const fadeScale = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+}
+
 const darkButtonClass =
   'inline-block rounded-btn border border-graphite bg-graphite px-[22px] py-[14px] text-body-sm font-semibold text-canvas shadow-btn-inset transition-colors hover:bg-white hover:text-graphite'
 
@@ -53,7 +58,7 @@ const TREATMENTS = [
   {
     title: 'Lentes de Contato Dental',
     description: 'Lentes de contato dental para um sorriso natural, alinhado e duradouro.',
-    image: '/images/tratamentos/lentes-de-contato.jpg',
+    image: '/images/tratamentos/lentes-contato.jpg',
   },
   {
     title: 'Clareamento Dental',
@@ -215,27 +220,31 @@ export default function Home() {
               {TREATMENTS.map((treatment) => (
                 <motion.div
                   key={treatment.title}
-                  variants={fadeSlideUp}
-                  whileHover={{ scale: 1.02, backgroundColor: '#f5f5f5' }}
+                  variants={fadeScale}
+                  whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3, ease: 'easeOut' }}
-                  className="overflow-hidden rounded-card border border-hairline bg-card"
+                  className="flex flex-col"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={treatment.image}
                     alt={treatment.title}
-                    className="h-[250px] w-full object-cover"
+                    className="aspect-[16/9] h-[150px] w-full rounded-t-card object-cover sm:h-[180px]"
                   />
-                  <div className="p-6">
-                    <h3 className="text-subheading font-semibold text-ink">{treatment.title}</h3>
-                    <p className="mt-2 text-body-sm text-pencil">{treatment.description}</p>
+                  <div className="rounded-b-card border border-hairline bg-card p-5">
+                    <h3 className="mb-3 text-[24px] font-bold leading-tight text-ink">
+                      {treatment.title}
+                    </h3>
+                    <p className="mb-4 text-[14px] font-medium leading-[1.66] text-pencil">
+                      {treatment.description}
+                    </p>
                     <a
                       href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
                         `Olá! Gostaria de saber mais sobre o tratamento de ${treatment.title}.`
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-4 inline-flex items-center gap-1 text-body-sm font-semibold text-graphite transition-colors hover:text-ink"
+                      className="inline-flex items-center gap-1 text-[14px] font-medium text-graphite transition-colors hover:text-ink"
                     >
                       Saiba Mais →
                     </a>
