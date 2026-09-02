@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Navbar from './components/Navbar'
 import InvisalignViewer from './components/InvisalignViewer'
+import Footer from './components/Footer'
 
 const WHATSAPP_NUMBER = '5521990472849'
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
@@ -365,33 +366,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FOOTER */}
-        <footer className="border-t border-hairline bg-card px-6 py-10 sm:px-10">
-          <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-6 sm:flex-row">
-            <p className="text-body-sm text-ink">
-              © {new Date().getFullYear()} Clínica Dra. Rafaella Gomes — CRO-RJ 22601
-            </p>
-            <div className="flex items-center gap-6">
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-body-sm text-ink transition-colors hover:text-pencil"
-              >
-                WhatsApp
-              </a>
-              <a
-                href="https://www.instagram.com/dentistatop/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-body-sm text-ink transition-colors hover:text-pencil"
-              >
-                Instagram
-              </a>
-            </div>
-          </div>
-        </footer>
       </main>
+
+      <Footer />
     </>
   )
 }
