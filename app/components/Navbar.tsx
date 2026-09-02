@@ -40,8 +40,17 @@ export default function Navbar() {
       className="absolute left-0 right-0 top-0 z-50 bg-transparent"
     >
       <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-3 sm:px-10">
-        <motion.a href="#home" variants={fadeSlideUp} className="text-body-sm text-white">
-          © Clínica Dra. Rafaella
+        <motion.a
+          href="#"
+          variants={fadeSlideUp}
+          className="transition-opacity hover:opacity-80"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/logo-dra-rafaella-gomes.png"
+            alt="Dra. Rafaella Gomes"
+            className="h-8 w-auto sm:h-10"
+          />
         </motion.a>
 
         {/* Desktop */}

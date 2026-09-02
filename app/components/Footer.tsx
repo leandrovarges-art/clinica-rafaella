@@ -11,6 +11,19 @@ const treatmentWhatsappUrl = (treatment: string) =>
     `Olá! Gostaria de saber mais sobre o tratamento de ${treatment}.`
   )}`
 
+const whatsappBtnClass =
+  'inline-block rounded-btn border border-graphite bg-graphite px-[22px] py-[12px] text-body-sm font-semibold text-canvas shadow-btn-inset transition-colors hover:bg-white hover:text-graphite'
+
+const fadeSlideUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+}
+
+const staggerContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } },
+}
+
 const FOOTER_COLUMNS = [
   {
     title: 'Serviços',
@@ -61,11 +74,68 @@ export default function Footer() {
     >
       <div className="bg-[#1c1d20] px-10 py-20">
         <div className="mx-auto max-w-[1200px]">
-          <div className="mb-6 flex h-[80px] items-center">
-            <span className="font-serif text-[40px] leading-none text-white">
-              Dra. Rafaella Gomes
-            </span>
-          </div>
+          <a href="#" className="mb-6 inline-block transition-opacity hover:opacity-80">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/logo-dra-rafaella-gomes.png"
+              alt="Dra. Rafaella Gomes"
+              className="h-12 w-auto sm:h-[60px]"
+            />
+          </a>
+
+          <motion.div
+            id="contato"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={staggerContainer}
+            className="mb-16 grid grid-cols-1 gap-4 md:grid-cols-3"
+          >
+            <motion.div
+              variants={fadeSlideUp}
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
+              className="rounded-card border border-hairline bg-card p-6"
+            >
+              <p className="mb-2 text-[12px] font-semibold uppercase tracking-[0.05em] text-faint">
+                Telefone
+              </p>
+              <a
+                href="tel:+5521990472849"
+                className="text-[18px] font-bold text-ink transition-colors hover:text-pencil"
+              >
+                +55 (21) 99047-2849
+              </a>
+            </motion.div>
+
+            <motion.div
+              variants={fadeSlideUp}
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
+              className="rounded-card border border-hairline bg-card p-6"
+            >
+              <p className="mb-2 text-[12px] font-semibold uppercase tracking-[0.05em] text-faint">
+                WhatsApp
+              </p>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className={whatsappBtnClass}>
+                WhatsApp
+              </a>
+            </motion.div>
+
+            <motion.div
+              variants={fadeSlideUp}
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
+              className="rounded-card border border-hairline bg-card p-6"
+            >
+              <p className="mb-2 text-[12px] font-semibold uppercase tracking-[0.05em] text-faint">
+                Endereço
+              </p>
+              <p className="text-[16px] font-medium text-ink">
+                Av. Embaixador Abelardo Bueno, 3500, Barra da Tijuca
+              </p>
+            </motion.div>
+          </motion.div>
 
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
             {FOOTER_COLUMNS.map((column) => (
