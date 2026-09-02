@@ -49,7 +49,7 @@ export default function Navbar() {
           <img
             src="/images/logo-dra-rafaella-gomes.png"
             alt="Dra. Rafaella Gomes"
-            className="h-8 w-auto sm:h-10"
+            className="h-10 w-auto sm:h-[50px]"
           />
         </motion.a>
 
