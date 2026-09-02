@@ -25,6 +25,16 @@ const fadeScale = {
   visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } },
 }
 
+const passthrough = {
+  hidden: {},
+  visible: {},
+}
+
+const circleFadeScale = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+}
+
 const darkButtonClass =
   'inline-block rounded-btn border border-graphite bg-graphite px-[22px] py-[14px] text-body-sm font-semibold text-canvas shadow-btn-inset transition-colors hover:bg-white hover:text-graphite'
 
@@ -164,8 +174,8 @@ export default function Home() {
         <InvisalignViewer />
 
         {/* COMO FUNCIONA */}
-        <section id="como-funciona" className="bg-canvas px-6 py-16 sm:px-10">
-          <div className="mx-auto max-w-[1200px]">
+        <section id="como-funciona" className="bg-white px-4 py-[120px]">
+          <div className="mx-auto max-w-6xl">
             <motion.h2
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -186,12 +196,27 @@ export default function Home() {
               {STEPS.map((step) => (
                 <motion.div
                   key={step.number}
-                  variants={fadeSlideUp}
-                  className="border-t border-hairline pt-6 text-center"
+                  variants={passthrough}
+                  className="flex flex-col items-center text-center"
                 >
-                  <span className="text-body-sm font-semibold text-graphite">{step.number}</span>
-                  <h3 className="mt-2 text-subheading font-semibold text-ink">{step.title}</h3>
-                  <p className="mt-2 text-body-sm text-pencil">{step.description}</p>
+                  <motion.div
+                    variants={circleFadeScale}
+                    className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-hairline"
+                  >
+                    <span className="text-[48px] font-bold text-faint">{step.number}</span>
+                  </motion.div>
+
+                  <div aria-hidden className="mb-3 hidden h-[2px] w-full bg-hairline lg:block" />
+
+                  <motion.div
+                    variants={fadeSlideUp}
+                    className="w-full rounded-card border border-hairline bg-canvas p-6"
+                  >
+                    <h3 className="mb-3 text-[24px] font-bold text-ink">{step.title}</h3>
+                    <p className="text-[14px] font-medium leading-[1.66] text-pencil">
+                      {step.description}
+                    </p>
+                  </motion.div>
                 </motion.div>
               ))}
             </motion.div>
