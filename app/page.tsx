@@ -30,9 +30,14 @@ const passthrough = {
   visible: {},
 }
 
-const circleFadeScale = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+const fadeSlideUpSmall = {
+  hidden: { opacity: 0, y: 12 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+}
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.5, ease: 'easeOut' } },
 }
 
 const darkButtonClass =
@@ -186,40 +191,43 @@ export default function Home() {
               Como Funciona
             </motion.h2>
 
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.15 }}
-              variants={staggerContainer}
-              className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
-            >
-              {STEPS.map((step) => (
-                <motion.div
-                  key={step.number}
-                  variants={passthrough}
-                  className="flex flex-col items-center text-center"
-                >
-                  <motion.div
-                    variants={circleFadeScale}
-                    className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-hairline"
-                  >
-                    <span className="text-[48px] font-bold text-faint">{step.number}</span>
-                  </motion.div>
+            <div className="relative mt-16">
+              <div
+                aria-hidden
+                className="absolute inset-x-0 top-0 hidden h-[2px] bg-hairline lg:block"
+              />
 
-                  <div aria-hidden className="mb-3 hidden h-[2px] w-full bg-hairline lg:block" />
-
-                  <motion.div
-                    variants={fadeSlideUp}
-                    className="w-full rounded-card border border-hairline bg-canvas p-6"
-                  >
-                    <h3 className="mb-3 text-[24px] font-bold text-ink">{step.title}</h3>
-                    <p className="text-[14px] font-medium leading-[1.66] text-pencil">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.15 }}
+                variants={staggerContainer}
+                className="grid grid-cols-1 gap-y-10 gap-x-0 md:grid-cols-2 lg:grid-cols-4 lg:pt-4"
+              >
+                {STEPS.map((step) => (
+                  <motion.div key={step.number} variants={passthrough} className="px-6 lg:px-4">
+                    <motion.p
+                      variants={fadeSlideUpSmall}
+                      className="mb-2 text-[32px] font-bold text-faint"
+                    >
+                      {step.number}
+                    </motion.p>
+                    <motion.h3
+                      variants={fadeSlideUpSmall}
+                      className="mb-2 text-[20px] font-bold text-ink"
+                    >
+                      {step.title}
+                    </motion.h3>
+                    <motion.p
+                      variants={fadeIn}
+                      className="min-h-[60px] text-[14px] font-medium leading-[1.66] text-pencil"
+                    >
                       {step.description}
-                    </p>
+                    </motion.p>
                   </motion.div>
-                </motion.div>
-              ))}
-            </motion.div>
+                ))}
+              </motion.div>
+            </div>
           </div>
         </section>
 
