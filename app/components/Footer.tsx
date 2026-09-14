@@ -79,7 +79,7 @@ export default function Footer() {
             <img
               src="/images/logo-dra-rafaella-gomes.png"
               alt="Dra. Rafaella Gomes"
-              className="h-12 w-auto sm:h-[60px]"
+              className="h-[70px] w-auto sm:h-[90px]"
             />
           </a>
 
