@@ -70,6 +70,12 @@ const STEPS = [
   },
 ]
 
+const ITERO_BENEFITS = [
+  'Precisão em 3D',
+  'Visualização do Resultado',
+  'Conforto Total',
+]
+
 const TREATMENTS = [
   {
     title: 'Lentes de Contato Dental',
@@ -323,6 +329,103 @@ export default function Home() {
                 ético e profissional.
               </motion.p>
             </motion.div>
+          </div>
+        </section>
+
+        {/* ITERO */}
+        <section id="itero" className="bg-white px-4 py-[120px]">
+          <div className="mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-2">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <motion.img
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+              src="/images/itero.jpg"
+              alt="Scanner iTero para planejamento digital do sorriso"
+              className="h-auto w-full max-w-[600px] rounded-3xl object-cover shadow-sm"
+            />
+
+            <div className="text-left">
+              <motion.h2
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
+                className="mb-4 font-serif text-heading text-ink"
+              >
+                Tecnologia iTero
+              </motion.h2>
+
+              <motion.p
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
+                className="mb-6 text-[20px] font-medium text-faint"
+              >
+                Planejamento Digital do Sorriso
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: 'easeOut', delay: 0.4 }}
+                className="mb-8 text-[16px] font-medium leading-[1.66] text-pencil"
+              >
+                Com o scanner iTero, sua boca é digitalizada em minutos, sem moldes
+                desconfortáveis. A tecnologia captura cada detalhe do seu sorriso em 3D,
+                permitindo um diagnóstico mais preciso e um planejamento de tratamento
+                pensado especialmente para você.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
+                className="flex flex-col gap-3"
+              >
+                {ITERO_BENEFITS.map((benefit) => (
+                  <div key={benefit} className="flex items-center gap-3">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-graphite">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.5 6.5L4.75 8.75L9.5 3.5"
+                          stroke="white"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <p className="text-[16px] font-semibold text-ink">{benefit}</p>
+                  </div>
+                ))}
+              </motion.div>
+
+              <motion.a
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: 'easeOut', delay: 0.6 }}
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+                  'Olá! Gostaria de agendar uma avaliação com o scanner iTero.'
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${darkButtonClass} mt-8`}
+              >
+                Agendar Avaliação iTero
+              </motion.a>
+            </div>
           </div>
         </section>
 
