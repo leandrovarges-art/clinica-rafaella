@@ -37,7 +37,7 @@ export default function InvisalignViewer() {
             animate={{ rotateY: hasEntered ? 360 : 0 }}
             transition={
               hasEntered
-                ? { rotateY: { duration: 6, repeat: Infinity, ease: 'linear' } }
+                ? { rotateY: { duration: 12, repeat: Infinity, ease: 'linear' } }
                 : { duration: 0.8 }
             }
             whileHover={
