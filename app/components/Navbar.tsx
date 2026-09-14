@@ -37,7 +37,7 @@ export default function Navbar() {
       initial="hidden"
       animate="visible"
       variants={staggerContainer}
-      className="fixed left-0 right-0 top-0 z-50 bg-graphite/95 backdrop-blur-md"
+      className="fixed left-0 right-0 top-0 z-50 bg-ink/30 backdrop-blur-[10px]"
     >
       <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-3 sm:px-10">
         <motion.a
