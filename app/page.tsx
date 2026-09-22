@@ -394,11 +394,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, ease: 'easeOut', delay: 0.45 }}
-                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-                  'Olá! Gostaria de saber mais sobre o scanner iTero.'
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/itero"
                 className={`${darkButtonClass} mt-4 mb-8`}
               >
                 Saiba Mais

@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { label: 'Como Funciona', href: '#como-funciona' },
   { label: 'Tratamentos', href: '#tratamentos' },
   { label: 'Sobre', href: '#sobre' },
+  { label: 'iTero', href: '/itero' },
   { label: 'Contato', href: '#contato' },
 ]
 
