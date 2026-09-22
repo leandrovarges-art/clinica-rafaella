@@ -367,18 +367,42 @@ export default function Home() {
                 Planejamento Digital do Sorriso
               </motion.p>
 
-              <motion.p
+              <motion.div
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, ease: 'easeOut', delay: 0.4 }}
-                className="mb-8 text-[16px] font-medium leading-[1.66] text-pencil"
+                className="mb-6 text-[16px] font-medium leading-[1.66] text-pencil"
               >
-                Com o scanner iTero, sua boca é digitalizada em minutos, sem moldes
-                desconfortáveis. A tecnologia captura cada detalhe do seu sorriso em 3D,
-                permitindo um diagnóstico mais preciso e um planejamento de tratamento
-                pensado especialmente para você.
-              </motion.p>
+                <p className="mb-4">
+                  Com o scanner iTero, sua boca é digitalizada em poucos minutos, sem
+                  moldes e materiais desconfortáveis. A tecnologia captura cada detalhe
+                  do seu sorriso em 3D, permitindo um diagnóstico mais preciso e um
+                  planejamento de tratamento pensado especialmente para você.
+                </p>
+                <p>
+                  Com esse exame, você vai conhecer seu sorriso de uma maneira
+                  totalmente diferente, ver se tem cárie entre os dentes, conhecer o
+                  mapa da sua mordida (se está mordendo corretamente) e ter a
+                  oportunidade de ver seu sorriso antes e depois de um tratamento com
+                  Invisalign.
+                </p>
+              </motion.div>
+
+              <motion.a
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: 'easeOut', delay: 0.45 }}
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+                  'Olá! Gostaria de saber mais sobre o scanner iTero.'
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${darkButtonClass} mt-4 mb-8`}
+              >
+                Saiba Mais
+              </motion.a>
 
               <motion.div
                 initial={{ opacity: 0, y: 24 }}
