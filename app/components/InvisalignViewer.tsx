@@ -3,10 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 
-const WHATSAPP_NUMBER = '5521990472849'
-const INVISALIGN_WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  'Olá! Gostaria de solicitar uma visualização do Invisalign.'
-)}`
+const INVISALIGN_VIEWER_URL = 'https://starter-kit.invisalign.hamburg/sv/1756903'
 
 const staggerContainer = {
   hidden: {},
@@ -62,16 +59,17 @@ export default function InvisalignViewer() {
           <motion.h2 variants={fadeSlideUp} className="text-heading font-bold text-ink">
             Invisalign 3D
           </motion.h2>
-          <motion.p variants={fadeSlideUp} className="mt-4 text-body text-pencil">
-            Visualize seu tratamento
-          </motion.p>
-          <motion.p variants={fadeSlideUp} className="mt-4 text-body-sm text-faint">
-            Veja o alinhador em detalhes e entenda como a tecnologia Invisalign vai transformar
-            seu sorriso.
+          <motion.p
+            variants={fadeSlideUp}
+            className="mt-4 text-[18px] font-medium leading-[1.66] text-pencil"
+          >
+            Que tal conhecer seu novo sorriso antes mesmo de iniciar seu tratamento? Aqui no
+            Consultório Rafaella Gomes você consegue visualizar como seu sorriso ficará após
+            tratamento ortodôntico Invisalign.
           </motion.p>
           <motion.a
             variants={fadeSlideUp}
-            href={INVISALIGN_WHATSAPP_URL}
+            href={INVISALIGN_VIEWER_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-block rounded-btn border border-graphite bg-graphite px-[22px] py-[14px] text-body-sm font-semibold text-canvas shadow-btn-inset transition-colors hover:bg-white hover:text-graphite"
