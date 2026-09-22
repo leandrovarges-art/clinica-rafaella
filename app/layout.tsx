@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
+    icon: '/favicon.png',
+    apple: '/favicon.png',
   },
   robots: {
     index: true,
