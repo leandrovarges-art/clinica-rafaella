@@ -149,8 +149,15 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="mt-4 text-body-sm font-semibold uppercase tracking-[0.05em] text-white"
+              className="mt-4 flex items-center gap-2 text-body-sm font-semibold uppercase tracking-[0.05em] text-white"
             >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="white" className="shrink-0">
+                <circle cx="12" cy="12" r="3" />
+                <circle cx="12" cy="5" r="3" />
+                <circle cx="12" cy="19" r="3" />
+                <circle cx="5" cy="12" r="3" />
+                <circle cx="19" cy="12" r="3" />
+              </svg>
               Invisalign TOP DOCTOR
             </motion.p>
             <motion.p
