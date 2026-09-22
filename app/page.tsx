@@ -323,10 +323,17 @@ export default function Home() {
                 variants={fadeSlideUp}
                 className="text-[18px] font-medium leading-[1.66] tracking-[-0.45px] text-pencil"
               >
-                Formada há 25 anos com Mestrado e Especialidades em diversas áreas da odontologia,
+                Formada há 28 anos com Mestrado e Especialidades em diversas áreas da odontologia,
                 a Dra. Rafaella Gomes tem o propósito de preservar a saúde, o sorriso e a
                 qualidade de vida de seus pacientes, a partir de um atendimento personalizado,
-                ético e profissional.
+                humanizado, ético e profissional.
+              </motion.p>
+              <motion.p
+                variants={fadeSlideUp}
+                className="mt-4 text-[16px] font-bold text-pencil"
+              >
+                Premiada Invisalign Top Doctor 2025 e 2026, é uma profissional que transformou
+                muitos sorrisos com qualidade.
               </motion.p>
             </motion.div>
           </div>
