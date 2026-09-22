@@ -145,21 +145,29 @@ export default function Home() {
             >
               Dra. Rafaella Gomes
             </motion.h1>
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="mt-4 flex items-center gap-2 text-body-sm font-semibold uppercase tracking-[0.05em] text-white"
             >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="white" className="shrink-0">
-                <circle cx="12" cy="12" r="3" />
-                <circle cx="12" cy="5" r="3" />
-                <circle cx="12" cy="19" r="3" />
-                <circle cx="5" cy="12" r="3" />
-                <circle cx="19" cy="12" r="3" />
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="shrink-0"
+              >
+                <path
+                  d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                  fill="white"
+                  stroke="white"
+                  strokeWidth="0.5"
+                />
               </svg>
-              Invisalign TOP DOCTOR
-            </motion.p>
+              <span>INVISALIGN TOP DOCTOR</span>
+            </motion.div>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
