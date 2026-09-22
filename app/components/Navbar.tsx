@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { AnimatePresence, motion } from 'framer-motion'
 
 const NAV_LINKS = [
@@ -41,18 +42,16 @@ export default function Navbar() {
       className="fixed left-0 right-0 top-0 z-50 bg-ink/30 backdrop-blur-[10px]"
     >
       <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-3 sm:px-10">
-        <motion.a
-          href="#"
-          variants={fadeSlideUp}
-          className="transition-opacity hover:opacity-80"
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/logo-dra-rafaella-gomes.png"
-            alt="Dra. Rafaella Gomes"
-            className="h-[50px] w-auto sm:h-[70px]"
-          />
-        </motion.a>
+        <motion.div variants={fadeSlideUp}>
+          <Link href="/" className="inline-block transition-opacity hover:opacity-80">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/logo-dra-rafaella-gomes.png"
+              alt="Dra. Rafaella Gomes"
+              className="h-[50px] w-auto sm:h-[70px]"
+            />
+          </Link>
+        </motion.div>
 
         {/* Desktop */}
         <motion.div variants={staggerContainer} className="hidden items-center gap-8 md:flex">
