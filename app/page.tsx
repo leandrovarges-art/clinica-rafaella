@@ -20,6 +20,11 @@ const staggerContainer = {
   visible: { transition: { staggerChildren: 0.1 } },
 }
 
+const aboutFadeSlideUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
+}
+
 const fadeScale = {
   hidden: { opacity: 0, scale: 0.9 },
   visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } },
@@ -76,10 +81,10 @@ const ITERO_BENEFITS = [
   'Conforto Total',
 ]
 
-const ABOUT_STATS = [
-  { value: '28', label: 'Anos de Experiência' },
-  { value: 'Milhares', label: 'Sorrisos Transformados' },
-  { value: '⭐ Invisalign', label: 'Top Doctor 2025 e 2026' },
+const ABOUT_CREDENTIALS = [
+  { value: '28', label: 'Anos de Experiência', valueClass: 'text-[32px]' },
+  { value: '⭐ Invisalign', label: 'Top Doctor 2025 e 2026', valueClass: 'text-[24px]' },
+  { value: 'Milhares', label: 'Sorrisos Transformados', valueClass: 'text-[32px]' },
 ]
 
 const TREATMENTS = [
@@ -335,17 +340,17 @@ export default function Home() {
         </section>
 
         {/* SOBRE */}
-        <section id="sobre" className="bg-white px-4 pb-[120px] pt-[120px]">
-          <div className="mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-2">
+        <section id="sobre" className="bg-white px-4 py-[120px]">
+          <div className="mx-auto grid max-w-[1200px] items-center gap-12 lg:grid-cols-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <motion.img
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, ease: 'easeOut' }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
               src="/images/dra-rafaella-about.jpg"
               alt="Dra. Rafaella Gomes"
-              className="h-auto w-full max-w-[500px] rounded-3xl object-cover shadow-sm"
+              className="h-auto w-full max-w-[500px] rounded-[28px] object-cover shadow-lg"
             />
 
             <motion.div
@@ -355,28 +360,42 @@ export default function Home() {
               variants={staggerContainer}
               className="text-left"
             >
-              <motion.h2 variants={fadeSlideUp} className="mb-6 text-heading font-bold text-ink">
+              <motion.h2
+                variants={aboutFadeSlideUp}
+                className="mb-8 font-serif text-[36px] font-normal leading-[1.1] tracking-[-0.025em] text-ink md:text-[48px]"
+              >
                 Sobre a Dra. Rafaella Gomes
               </motion.h2>
-              <motion.p
-                variants={fadeSlideUp}
-                className="mb-8 text-[16px] font-medium leading-[1.66] text-pencil"
+              <motion.div
+                variants={aboutFadeSlideUp}
+                className="mb-12 space-y-5 text-[14px] font-normal leading-[1.7] text-pencil md:text-[16px]"
               >
-                Formada há 28 anos com Mestrado e Especialidades em diversas áreas da odontologia,
-                a Dra. Rafaella Gomes tem o propósito de preservar a saúde, o sorriso e a
-                qualidade de vida de seus pacientes, a partir de um atendimento personalizado,
-                humanizado, ético e profissional.
-              </motion.p>
+                <p>
+                  Formada há 28 anos com Mestrado e Especialidades em diversas áreas da
+                  odontologia, a Dra. Rafaella Gomes tem o propósito de preservar a saúde, o
+                  sorriso e a qualidade de vida de seus pacientes, a partir de um atendimento
+                  personalizado, humanizado, ético e profissional.
+                </p>
+                <p>
+                  Premiada Invisalign Top Doctor 2025 e 2026, é uma profissional que transformou
+                  muitos sorrisos com qualidade.
+                </p>
+              </motion.div>
+
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-                {ABOUT_STATS.map((stat) => (
+                {ABOUT_CREDENTIALS.map((credential) => (
                   <motion.div
-                    key={stat.label}
-                    variants={fadeSlideUp}
-                    className="rounded-[20px] border border-hairline bg-card p-4"
+                    key={credential.label}
+                    variants={aboutFadeSlideUp}
+                    className="rounded-[20px] border border-hairline bg-card p-5"
                   >
-                    <p className="text-[32px] font-bold leading-tight text-ink">{stat.value}</p>
+                    <p
+                      className={`font-bold leading-tight text-ink ${credential.valueClass}`}
+                    >
+                      {credential.value}
+                    </p>
                     <p className="mt-1 text-[12px] font-medium uppercase text-faint">
-                      {stat.label}
+                      {credential.label}
                     </p>
                   </motion.div>
                 ))}
