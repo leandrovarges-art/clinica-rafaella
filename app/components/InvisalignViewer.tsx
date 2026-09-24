@@ -57,7 +57,7 @@ export default function InvisalignViewer() {
           className="text-left"
         >
           <motion.h2 variants={fadeSlideUp} className="text-heading font-bold text-ink">
-            Invisalign 3D
+            Simulação do seu novo sorriso
           </motion.h2>
           <motion.p
             variants={fadeSlideUp}
@@ -74,7 +74,7 @@ export default function InvisalignViewer() {
             rel="noopener noreferrer"
             className="mt-8 inline-block rounded-btn border border-graphite bg-graphite px-[22px] py-[14px] text-body-sm font-semibold text-canvas shadow-btn-inset transition-colors hover:bg-white hover:text-graphite"
           >
-            Solicitar Visualização
+            Faça sua simulação
           </motion.a>
         </motion.div>
       </div>
