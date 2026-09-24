@@ -107,6 +107,24 @@ const TREATMENTS = [
     description: 'Profilaxia e limpeza profunda para manter a saúde bucal em dia.',
     image: '/images/tratamentos/limpeza.jpg',
   },
+  {
+    title: 'Implante e Prótese',
+    description:
+      'Reabilitação completa com implantes dentários e próteses de alta qualidade para restaurar sua mastigação e estética.',
+    image: '/images/tratamentos/implante-protese.jpg',
+  },
+  {
+    title: 'Ortodontia Infantil',
+    description:
+      'Tratamento ortodôntico especializado para crianças, guiando o desenvolvimento correto dos dentes e maxilares.',
+    image: '/images/tratamentos/ortodontia-infantil.jpg',
+  },
+  {
+    title: 'Apnéia do Sono',
+    description:
+      'Aparelhos intraorais para tratar apnéia obstrutiva do sono com conforto e eficácia.',
+    image: '/images/tratamentos/apneia-sono.jpg',
+  },
 ]
 
 export default function Home() {
