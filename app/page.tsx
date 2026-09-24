@@ -150,7 +150,9 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            src="/images/dra-rafaella-hero.jpg"
+            src="/images/dra-rafaella-hero.jpg?v=2"
+            loading="eager"
+            fetchPriority="high"
             alt="Dra. Rafaella Gomes segurando um alinhador Invisalign, com o consultório ao fundo"
             className="block h-screen w-screen object-cover object-[center_30%]"
           />
