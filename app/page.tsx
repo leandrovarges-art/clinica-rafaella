@@ -76,6 +76,12 @@ const ITERO_BENEFITS = [
   'Conforto Total',
 ]
 
+const ABOUT_STATS = [
+  { value: '28', label: 'Anos de Experiência' },
+  { value: 'Milhares', label: 'Sorrisos Transformados' },
+  { value: '⭐ Invisalign', label: 'Top Doctor 2025 e 2026' },
+]
+
 const TREATMENTS = [
   {
     title: 'Lentes de Contato Dental',
@@ -329,7 +335,7 @@ export default function Home() {
         </section>
 
         {/* SOBRE */}
-        <section id="sobre" className="bg-canvas px-4 pb-[120px] pt-[120px]">
+        <section id="sobre" className="bg-white px-4 pb-[120px] pt-[120px]">
           <div className="mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <motion.img
@@ -354,20 +360,27 @@ export default function Home() {
               </motion.h2>
               <motion.p
                 variants={fadeSlideUp}
-                className="text-[18px] font-medium leading-[1.66] tracking-[-0.45px] text-pencil"
+                className="mb-8 text-[16px] font-medium leading-[1.66] text-pencil"
               >
                 Formada há 28 anos com Mestrado e Especialidades em diversas áreas da odontologia,
                 a Dra. Rafaella Gomes tem o propósito de preservar a saúde, o sorriso e a
                 qualidade de vida de seus pacientes, a partir de um atendimento personalizado,
                 humanizado, ético e profissional.
               </motion.p>
-              <motion.p
-                variants={fadeSlideUp}
-                className="mt-4 text-[16px] font-bold text-pencil"
-              >
-                Premiada Invisalign Top Doctor 2025 e 2026, é uma profissional que transformou
-                muitos sorrisos com qualidade.
-              </motion.p>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                {ABOUT_STATS.map((stat) => (
+                  <motion.div
+                    key={stat.label}
+                    variants={fadeSlideUp}
+                    className="rounded-[20px] border border-hairline bg-card p-4"
+                  >
+                    <p className="text-[32px] font-bold leading-tight text-ink">{stat.value}</p>
+                    <p className="mt-1 text-[12px] font-medium uppercase text-faint">
+                      {stat.label}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
           </div>
         </section>
