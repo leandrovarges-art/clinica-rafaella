@@ -141,7 +141,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="mt-2 font-serif text-[48px] font-normal leading-[1.05] tracking-[-0.025em] text-white sm:text-display"
+              className="mt-2 font-serif text-[48px] font-normal leading-[1.05] tracking-[-0.025em] text-white sm:text-[96px]"
             >
               Dra. Rafaella Gomes
             </motion.h1>
