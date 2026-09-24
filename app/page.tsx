@@ -128,7 +128,7 @@ const TREATMENTS = [
     title: 'Ortodontia Infantil',
     description:
       'Tratamento ortodôntico especializado para crianças, guiando o desenvolvimento correto dos dentes e maxilares.',
-    image: '/images/tratamentos/ortodontia-infantil.jpg',
+    image: '/images/tratamentos/ortodontia-infantil.jpg?v=2',
   },
   {
     title: 'Apnéia do Sono',
@@ -315,6 +315,7 @@ export default function Home() {
                   <img
                     src={treatment.image}
                     alt={treatment.title}
+                    loading="lazy"
                     className="aspect-[16/9] h-[150px] w-full rounded-t-card object-cover sm:h-[180px]"
                   />
                   <div className="rounded-b-card border border-hairline bg-card p-5">
