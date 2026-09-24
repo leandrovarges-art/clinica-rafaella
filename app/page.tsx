@@ -83,7 +83,7 @@ const ITERO_BENEFITS = [
 
 const ABOUT_CREDENTIALS = [
   { value: '28', label: 'Anos de Experiência', valueClass: 'text-[32px]' },
-  { value: '⭐ Invisalign', label: 'Top Doctor 2025 e 2026', valueClass: 'text-[24px]' },
+  { value: 'Invisalign', star: true, label: 'Top Doctor 2025 e 2026', valueClass: 'text-[24px]' },
   { value: 'Milhares', label: 'Sorrisos Transformados', valueClass: 'text-[32px]' },
 ]
 
@@ -390,8 +390,9 @@ export default function Home() {
                     className="rounded-[20px] border border-hairline bg-card p-5"
                   >
                     <p
-                      className={`font-bold leading-tight text-ink ${credential.valueClass}`}
+                      className={`flex items-center gap-1 font-bold leading-tight text-ink ${credential.valueClass}`}
                     >
+                      {credential.star && <span aria-hidden="true">⭐</span>}
                       {credential.value}
                     </p>
                     <p className="mt-1 text-[12px] font-medium uppercase text-faint">
