@@ -123,7 +123,7 @@ export default function Home() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             src="/images/dra-rafaella-hero.jpg"
             alt="Dra. Rafaella Gomes segurando um alinhador Invisalign, com o consultório ao fundo"
-            className="block h-screen w-screen object-cover object-center"
+            className="block h-screen w-screen object-cover object-[center_30%]"
           />
 
           <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/60 to-transparent" />
