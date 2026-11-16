@@ -82,9 +82,9 @@ const ITERO_BENEFITS = [
 ]
 
 const ABOUT_CREDENTIALS = [
-  { value: '28', label: 'Anos de Experiência', valueClass: 'text-[32px]' },
-  { value: 'Invisalign', star: true, label: 'Top Doctor 2025 e 2026', valueClass: 'text-[24px]' },
-  { value: 'Milhares', label: 'Sorrisos Transformados', valueClass: 'text-[32px]' },
+  { value: '28', label: 'Anos de Experiência', valueClass: 'text-[32px] lg:text-2xl' },
+  { value: 'Invisalign', star: true, label: 'Top Doctor 2025 e 2026', valueClass: 'text-[24px] lg:text-[15px] xl:text-lg' },
+  { value: 'Milhares', label: 'Sorrisos Transformados', valueClass: 'text-[32px] lg:text-xl xl:text-2xl' },
 ]
 
 const TREATMENTS = [
@@ -344,7 +344,7 @@ export default function Home() {
 
         {/* SOBRE */}
         <section id="sobre" className="bg-white px-4 py-[120px]">
-          <div className="mx-auto grid max-w-[1200px] items-center gap-12 lg:grid-cols-2">
+          <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-12 lg:grid-cols-[3fr_2fr]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <motion.img
               initial={{ opacity: 0, scale: 0.9 }}
@@ -353,7 +353,7 @@ export default function Home() {
               transition={{ duration: 0.8, ease: 'easeOut' }}
               src="/images/dra-rafaella-about.jpg"
               alt="Dra. Rafaella Gomes"
-              className="h-auto w-full max-w-[500px] rounded-[28px] object-cover shadow-lg"
+              className="h-auto w-full rounded-[28px] object-cover shadow-lg"
             />
 
             <motion.div
@@ -371,7 +371,7 @@ export default function Home() {
               </motion.h2>
               <motion.div
                 variants={aboutFadeSlideUp}
-                className="mb-12 space-y-5 text-[14px] font-normal leading-[1.7] text-pencil md:text-[16px]"
+                className="mb-12 space-y-5 text-[16px] font-normal leading-[1.7] text-pencil"
               >
                 <p>
                   Formada há 28 anos com Mestrado e Especialidades em diversas áreas da
@@ -385,12 +385,12 @@ export default function Home() {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 lg:gap-3">
                 {ABOUT_CREDENTIALS.map((credential) => (
                   <motion.div
                     key={credential.label}
                     variants={aboutFadeSlideUp}
-                    className="rounded-[20px] border border-hairline bg-card p-5"
+                    className="rounded-[20px] border border-hairline bg-card p-5 lg:px-3 lg:py-4"
                   >
                     <p
                       className={`flex items-center gap-1 font-bold leading-tight text-ink ${credential.valueClass}`}
@@ -398,7 +398,7 @@ export default function Home() {
                       {credential.star && <span aria-hidden="true">⭐</span>}
                       {credential.value}
                     </p>
-                    <p className="mt-1 text-[12px] font-medium uppercase text-faint">
+                    <p className="mt-1 text-[12px] font-medium uppercase text-faint lg:text-[11px]">
                       {credential.label}
                     </p>
                   </motion.div>
