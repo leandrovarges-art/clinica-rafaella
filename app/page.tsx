@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import Navbar from './components/Navbar'
 import InvisalignViewer from './components/InvisalignViewer'
@@ -404,6 +405,15 @@ export default function Home() {
                   </motion.div>
                 ))}
               </div>
+
+              <motion.div variants={aboutFadeSlideUp} className="mt-10">
+                <Link
+                  href="/clinica"
+                  className="inline-block rounded-full border border-ink bg-ink px-[22px] py-[14px] text-body-sm font-semibold text-white shadow-btn-inset transition-colors hover:bg-white hover:text-ink"
+                >
+                  Nossa Clínica
+                </Link>
+              </motion.div>
             </motion.div>
           </div>
         </section>

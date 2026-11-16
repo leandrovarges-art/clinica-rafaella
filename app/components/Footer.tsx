@@ -39,7 +39,7 @@ const FOOTER_COLUMNS = [
     title: 'Sobre',
     links: [
       { label: 'Sobre a Dra.', href: '#sobre' },
-      { label: 'Nossa Clínica', href: '#sobre' },
+      { label: 'Nossa Clínica', href: '/clinica' },
       { label: 'Diferenciais', href: '#como-funciona' },
     ],
   },

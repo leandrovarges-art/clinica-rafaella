@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { label: 'Tratamentos', href: '#tratamentos' },
   { label: 'Sobre', href: '#sobre' },
   { label: 'iTero', href: '/itero' },
+  { label: 'Nossa Clínica', href: '/clinica' },
   { label: 'Contato', href: '#contato' },
 ]
 
