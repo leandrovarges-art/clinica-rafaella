@@ -129,7 +129,7 @@ const TREATMENTS = [
     title: 'Ortodontia Infantil',
     description:
       'Tratamento ortodôntico especializado para crianças, guiando o desenvolvimento correto dos dentes e maxilares.',
-    image: '/images/tratamentos/ortodontia-infantil.jpg?v=2',
+    image: '/images/tratamentos/ortodontia-infantil.jpg?v=3',
   },
   {
     title: 'Apnéia do Sono',
